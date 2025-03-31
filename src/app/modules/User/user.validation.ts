@@ -9,7 +9,7 @@ const createUserSchemaValidation = z.object({
         required_error: 'Password is required!',
         invalid_type_error: 'Password must be string!',
       })
-      .min(8, { message: 'Password must be at least * character long!' }),
+      .min(8, { message: 'Password must be at least 8 character long!' }),
     phone: z.string({ required_error: 'Phone is required!' }),
     role: z.enum(['admin', 'user'], { required_error: 'Role is required' }),
     address: z.string({ required_error: 'Address is required!' }),
